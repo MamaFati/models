@@ -134,5 +134,5 @@ Models helps us interact with the database to get information, they are also pyt
     ```
 15. migrate => Applies the above changes, it affects the db
     ```
-    python manage.py migrate
+    python manage.py migrate 
     ```
