@@ -1,0 +1,19 @@
+{% extends 'jobBoard/_base.html'%}
+ {% load humanize %} 
+ {% block content %}
+<div class="w-10/12 mx-auto">
+  <p class="pb-6">
+    <a
+      href="{% url 'home' %}"
+      class="border rounded px-4 py-2 bg-gray-100 hover:cursor-pointer hover:bg-gray-200"
+    >Go Back</a
+    >
+  </p>
+  <h1 class="text-3xl font-semibold pb-4 underline underline-offset-8">
+    {{posting.tittle| title}}
+  </h1>
+  <p class="font-semibold pb-2">Company: {{posting.company}}</p>
+  <p class="text-xl pb-2">Salary: ${{ posting.salary| intcomma }}</p>
+  <p>Description: {{posting.description}}</p>
+</div>
+{%endblock content%}
